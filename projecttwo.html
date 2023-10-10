@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACE liveEditor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2 class="animate-charcter">ACE liveEditor</h2>
+      </div>
+      <a href="./DemoProjects.html"
+        >Demo Projects <i class="fa-solid fa-arrow-right"></i
+      ></a>
+    </header>
+    <div class="container">
+      <div class="editor-container">
+        <label for="html-code"
+          ><i class="fa-brands fa-html5 html"></i> HTML :</label
+        >
+        <textarea
+          id="html-code"
+          class="code-editor"
+          rows="10"
+          spellcheck="false"
+        ><div class="container">
+
+          <div class="watch">
+        
+            <div class="outer">
+              <div class="inner">
+                <span class=" text hour">00 :</span>
+                <span class=" text min"> &nbsp; 00 :</span>
+                <span class=" text sec">&nbsp; 00</span>
+              </div>
+            </div>
+        
+            <div class="btns">
+              <button class="start">Start</button>
+              <button class="stop">Stop</button>
+              <button class="reset">Reset</button>
+            </div>
+        
+          </div>
+        
+        </div></textarea>
+        <label for="css-code"
+          ><i class="fa-brands fa-css3-alt css"></i> CSS :</label
+        >
+        <textarea
+          id="css-code"
+          class="code-editor"
+          rows="10"
+          spellcheck="false"
+        >* {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          font-family: sans-serif;
+          font-size: 16px;
+          width: 100%;
+          height: 100vh;
+          background-color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .outer {
+          width: 245px;
+          height: 245px;
+          border-radius: 50%;
+          background: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .inner {
+          width: 230px;
+          height: 230px;
+          border-radius: 50%;
+          background-color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .text {
+          color: white;
+          font-size: 30px;
+        }
+        .btns {
+          display: flex;
+          justify-content: space-between;
+          width: 250px;
+          margin-top: 25px;
+        }
+        button {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 2px solid white;
+          background-color: black;
+        
+          color: white;
+        }
+        button:hover {
+          background-color: white;
+          color: black;
+          cursor: pointer;
+        }
+        </textarea>
+        <label for="js-code"
+          ><i class="fa-brands fa-square-js js"></i> JavaScript :</label
+        >
+        <textarea
+          id="js-code"
+          class="code-editor"
+          rows="10"
+          spellcheck="false"
+        >let start = document.querySelector(".start");
+        let stop = document.querySelector(".stop");
+        let reset = document.querySelector(".reset");
+        
+        let hours = document.querySelector(".hour");
+        let mins = document.querySelector(".min");
+        let secs = document.querySelector(".sec");
+        
+        let hour = 0;
+        let min = 0;
+        let sec = 0;
+        
+        let interval;
+        
+        start.addEventListener("click", function () {
+          interval = setInterval(function () {
+            if (sec < 59) {
+              sec += 1;
+              secs.innerHTML = sec < 10 ? " 0" + sec : sec;
+            } else {
+              sec = 0;
+              secs.innerHTML = sec < 10 ? " 0" + sec : sec;
+              if (min < 59) {
+                min += 1;
+                mins.innerHTML = min < 10 ? "0" + min + ":" : min + ":";
+              } else {
+                hour += 1;
+                hours.innerHTML = hour < 10 ? "0" + hour + ":" : hour + ":";
+              }
+            }
+          }, 1000);
+        
+          start.style.pointerEvents = "none";
+        });
+        
+        stop.addEventListener("click", function () {
+          clearInterval(interval);
+          start.style.pointerEvents = "visible";
+        });
+        
+        reset.addEventListener("click", function () {
+          location.reload();
+        });
+        </textarea>
+      </div>
+      <div class="output-container">
+        <label
+          ><i class="fa-solid fa-code"></i> The Output :
+          <span
+            >press<span class="key">ctrl + r</span> to run the Code &
+            <span class="keyf">f5</span> to reset</span
+          ></label
+        >
+        <iframe id="output"></iframe>
+        <h2>Created By <span>MostafaKhidr</span></h2>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

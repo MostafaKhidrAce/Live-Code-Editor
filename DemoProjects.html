@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Projects</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2 class="animate-charcter">ACE liveEditor</h2>
+      </div>
+      <a href="./index.html"
+        ><i class="fa-solid fa-arrow-left"></i> Home
+      </a>
+    </header>
+    <section class="projectsContainer">
+      <div class="portfolio-item">
+        <h2>Tic Tac Toe</h2>
+        <div class="imgCont">
+          <img src="./imgs/Screenshot 2023-09-06 022154.png" alt="Website 1" />
+        </div>
+        <p>
+          Dive into the timeless classic of Tic-Tac-Toe
+          <span class="read-more" id="desc1">
+            with a modern twist in this interactive web game! "Tic-Tac-Toe Challenge" brings the nostalgic joy of Xs and Os to your fingertips, with a sleek and user-friendly interface crafted in HTML, CSS, and JavaScript.
+          </span>
+          <span class="show-description" onclick="showDescription('desc1')"
+            >Read More</span
+          >
+        </p>
+        <button onclick="projectOne('./projectone.html')">Go Edit</button>
+      </div>
+      <div class="portfolio-item">
+        <h2>Stop Watch</h2>
+        <div class="imgCont">
+          <img src="./imgs/Screenshot 2023-09-06 041231.png" alt="Website 2" />
+        </div>
+        <p>
+          Introducing the "Precision Stopwatch Project," 
+          <span class="read-more" id="desc2">
+            a meticulously crafted web-based stopwatch that offers precise timekeeping and a range of useful features. Built using HTML, CSS, and JavaScript, this stopwatch is perfect for timing various activities, whether it's tracking your workout, measuring cooking durations, or conducting scientific experiments.
+          </span>
+          <span class="show-description" onclick="showDescription('desc2')"
+            >Read More</span
+          >
+        </p>
+        <button onclick="projectOne('./projecttwo.html')">Go Edit</button>
+      </div>
+      <div class="portfolio-item">
+        <h2>3D Animation</h2>
+        <div class="imgCont">
+          <img src="./imgs/Screenshot 2023-09-06 044542.png" alt="Website 3" />
+        </div>
+        <p>
+          Step into the mesmerizing world of 3D animation with our 
+          <span class="read-more" id="desc3">
+            "Spectacular 3D Animation Showcase" project! This immersive and visually stunning web-based experience showcases the artistry of 3D animation and its limitless creative possibilities. Created with cutting-edge technology and artistic flair.
+          </span>
+          <span class="show-description" onclick="showDescription('desc3')"
+            >Read More</span
+          >
+        </p>
+        <button onclick="projectOne('./projectthree.html')">Go Edit</button>
+      </div>
+    </section>
+    <h2 class="seg">Created By <span>MostafaKhidr</span></h2>
+    <script>
+      function showDescription(id) {
+  const desc = document.getElementById(id);
+  if (desc.style.display === "none" || desc.style.display === "") {
+    desc.style.display = "inline";
+  } else {
+    desc.style.display = "none";
+  }
+}
+function projectOne(path) {
+window.location.href = path
+}
+    </script>
+  </body>
+</html>

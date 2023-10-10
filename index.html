@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACE liveEditor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2 class="animate-charcter">ACE liveEditor</h2>
+      </div>
+      <a href="./DemoProjects.html"
+        >Demo Projects <i class="fa-solid fa-arrow-right"></i
+      ></a>
+    </header>
+    <div class="container">
+      <div class="editor-container">
+        <label for="html-code"
+          ><i class="fa-brands fa-html5 html"></i> HTML :</label
+        >
+        <textarea
+          id="html-code"
+          class="code-editor"
+          rows="10"
+          spellcheck="false"
+        ></textarea>
+        <label for="css-code"
+          ><i class="fa-brands fa-css3-alt css"></i> CSS :</label
+        >
+        <textarea
+          id="css-code"
+          class="code-editor"
+          rows="10"
+          spellcheck="false"
+        ></textarea>
+        <label for="js-code"
+          ><i class="fa-brands fa-square-js js"></i> JavaScript :</label
+        >
+        <textarea
+          id="js-code"
+          class="code-editor"
+          rows="10"
+          spellcheck="false"
+        ></textarea>
+      </div>
+      <div class="output-container">
+        <label
+          ><i class="fa-solid fa-code"></i> The Output :
+          <span
+            >press<span class="key">ctrl + r</span> to run the Code &
+            <span class="keyf">f5</span> to reset</span
+          ></label
+        >
+        <iframe id="output"></iframe>
+        <h2>Created By <span>MostafaKhidr</span></h2>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
